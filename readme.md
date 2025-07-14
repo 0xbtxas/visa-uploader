@@ -2,6 +2,8 @@
 
 A full-stack application to upload, preview, and manage visa-related documents such as **passport**, **visa**, and **photo**.
 
+![Screenshot](./file-api/screenshots/Screenshot_1.jpg)
+
 ## ✨ Features
 
 - Upload documents by category (`passport`, `visa`, `photo`)

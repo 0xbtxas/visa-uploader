@@ -1,2 +1,4 @@
 *
 !.gitignore
+!fallbacks/
+!fallbacks/pdf.png
