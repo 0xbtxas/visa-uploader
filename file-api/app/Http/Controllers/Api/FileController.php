@@ -53,9 +53,14 @@ class FileController extends Controller
      */
     public function index(): JsonResponse
     {
+        $types = UploadedFile::TYPES;
         $files = UploadedFile::all()->groupBy('type');
 
-        $grouped = $files->map(fn($group) => UploadedFileResource::collection($group));
+        $grouped = collect($types)->mapWithKeys(function ($type) use ($files) {
+            return [
+                $type => UploadedFileResource::collection($files->get($type, collect())),
+            ];
+        });
 
         return response()->json($grouped);
     }

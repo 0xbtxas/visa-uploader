@@ -13,4 +13,6 @@ class UploadedFile extends Model
         'size',
         'type',
     ];
+
+    public const TYPES = ['passport', 'visa', 'photo'];
 }
